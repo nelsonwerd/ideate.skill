@@ -1,6 +1,6 @@
 # ideate
 
-An **Agent Skill — for Claude and OpenAI Codex** — for turning a **fuzzy idea** (or an existing project you want to improve) into a **locked concept + phased roadmap** — captured in one living `CONCEPT_BRIEF.md`. It's the upstream partner to the [`prompt-pack`](https://github.com/nelsonwerd/prompt-pack.skill) skill:
+An **Agent Skill — for Claude and OpenAI Codex** — for turning a **fuzzy idea** (or an existing project you want to improve) into a **locked concept + phased roadmap** — captured in one living `CONCEPT_BRIEF.md`. It's the upstream partner to the [`prompt-pack`](https://github.com/nelsonwerd/prompt-pack-skill) skill:
 
 > **ideate → `CONCEPT_BRIEF.md` → prompt-pack → execute**
 
@@ -40,9 +40,9 @@ unzip ideate.skill -d ~/.claude/skills/
 **Or from a clone of this repo:**
 
 ```bash
-git clone https://github.com/nelsonwerd/ideate.skill.git
+git clone https://github.com/nelsonwerd/ideate-skill.git
 mkdir -p ~/.claude/skills
-cp -r ideate.skill/ideate ~/.claude/skills/
+cp -r ideate-skill/ideate ~/.claude/skills/
 ```
 
 No restart needed — Claude Code detects it in-session. Verify with `/skills`.
@@ -77,7 +77,7 @@ Examples:
 - "Here's my repo. Deep-dive it: viability, quality, honest take — should I keep going?"
 - "Help me figure out what to build; I want a subscription SaaS but don't have a lane yet."
 
-It pairs directly with **[prompt-pack](https://github.com/nelsonwerd/prompt-pack.skill)**: when the concept is locked, `ideate` hands the `CONCEPT_BRIEF.md` to `prompt-pack`, which turns the roadmap into sequenced, self-contained build prompts.
+It pairs directly with **[prompt-pack](https://github.com/nelsonwerd/prompt-pack-skill)**: when the concept is locked, `ideate` hands the `CONCEPT_BRIEF.md` to `prompt-pack`, which turns the roadmap into sequenced, self-contained build prompts.
 
 ## What's in this repo
 
