@@ -28,39 +28,30 @@ Two modes: **greenfield** (fuzzy idea → concept) and **refinement** (evaluate/
 
 ## Install
 
-Skills live in `~/.claude/skills/` (all projects) or `.claude/skills/` (one project). Put the `ideate/` folder in either.
+This is an open **[Agent Skill](https://agentskills.io)** — the same `ideate/` folder works in **Claude** and **OpenAI Codex**. Pick your tool:
 
-**From the packaged file:**
-
-```bash
-mkdir -p ~/.claude/skills
-unzip ideate.skill -d ~/.claude/skills/
-```
-
-**Or from a clone of this repo:**
-
-```bash
-git clone https://github.com/nelsonwerd/ideate-skill.git
-mkdir -p ~/.claude/skills
-cp -r ideate-skill/ideate ~/.claude/skills/
-```
-
-No restart needed — Claude Code detects it in-session. Verify with `/skills`.
-
-## Works in Claude *and* Codex
-
-This follows the open **[Agent Skills](https://agentskills.io) standard**, so the same `SKILL.md` works in **Claude** and **OpenAI Codex**:
-
-| You use… | Add it by… |
+| You use… | Install it by… |
 |---|---|
-| **Claude Code** — terminal, the **Code** tab of the Claude desktop app, [claude.ai/code](https://claude.ai/code), or an IDE | the install above (drop `ideate/` in `~/.claude/skills/`) |
-| **OpenAI Codex** — CLI, app, or IDE | copy `ideate/SKILL.md` (+ `references/`) into `.agents/skills/ideate/` (repo) or `~/.agents/skills/ideate/` (global) → [Codex skills docs](https://developers.openai.com/codex/skills) |
-| **Claude chat** — the **Chat** tab of the desktop app, or [claude.ai](https://claude.ai) | uploading **`ideate.skill`** (the zip) under **Customize → Skills** → [using Skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude) |
-| **Any other agent** | pointing it at `SKILL.md` — it's just instructions |
+| **Claude Code** — terminal, the **Code** tab of the Claude desktop app, [claude.ai/code](https://claude.ai/code), or a VS Code / JetBrains IDE | dropping `ideate/` into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project) |
+| **OpenAI Codex** — CLI, app, or IDE | dropping `ideate/` into `~/.agents/skills/` (all repos) or `.agents/skills/` (one repo), then restarting Codex |
+| **Claude chat** — the **Chat** tab of the desktop app, or [claude.ai](https://claude.ai) | uploading **`ideate.skill`** (the zip in this repo) under **Customize → Skills** |
+| **Any other agent** | pointing it at `ideate/SKILL.md` — it's just instructions |
 
-<sub>Exact in-app menu names and commands shift between versions — the linked docs are the source of truth. Claude-specific behaviors (auto-activation by description) are invoked explicitly in Codex; the *methodology* itself is fully portable.</sub>
+The `.skill` file is just the `ideate/` folder zipped, so one `unzip` drops it into either skills home:
 
-**Runtime support:**
+```bash
+# Claude Code — detected in-session (verify with /skills):
+unzip ideate.skill -d ~/.claude/skills/
+
+# OpenAI Codex — the current skills path is ~/.agents/skills/; restart Codex after:
+mkdir -p ~/.agents/skills && unzip ideate.skill -d ~/.agents/skills/
+```
+
+Prefer a clone? `git clone https://github.com/nelsonwerd/ideate-skill.git`, then `cp -r ideate-skill/ideate` into whichever skills folder above.
+
+<sub>Menu names and exact paths shift between versions — the [Claude Skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude) and [Codex Skills](https://developers.openai.com/codex/skills) docs are the source of truth. Auto-activation by description is native to Claude; in Codex you invoke the skill explicitly. The methodology is identical across both.</sub>
+
+## Runtime support
 
 | | Claude chat | Claude Code | OpenAI Codex | Other agents |
 |---|---|---|---|---|
