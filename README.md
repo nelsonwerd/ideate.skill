@@ -10,7 +10,7 @@ It encodes a method reverse-engineered from real idea→ship journeys — *inclu
 
 Runs a disciplined funnel as a blunt, honest co-founder:
 
-1. **Frame** — absorb the brain-dump, set the "what makes this worth doing" rubric, and force the two things people always skip: a real **success metric** and a **kill criterion**.
+1. **Frame** — absorb the brain-dump, set the "what makes this worth doing" rubric, and force the things people always skip: a real **success metric**, a **kill criterion**, and — when feel is the wedge — **how load-bearing the design is** (a substantive design direction carried into the brief).
 2. **Explore** — *greenfield:* 5–7 comparable options ranked to your criteria, then mine your own lived experience for the wedge. *Refinement:* a four-lens assessment (what is it / viability / quality / honest take) and narrow strategic forks.
 3. **Pressure-test** (the gate) — two-sided honest assessment, competitor buckets, viability economics fit to the concept's type (market + unit economics if it's commercial; reach + cost-to-sustain if it's free/OSS/internal — cited fact vs estimate), feasibility tiers, a red-team pass, and verification against real artifacts. For high stakes it delegates to the `deep-dive` skill. Ends in a verdict and a **go / iterate / kill** decision — and before any *kill* it steelmans the idea's best case and frames the call as *park-with-a-revisit-trigger*, so it won't talk you out of a good idea on a confident hunch.
 4. **Converge** — lock decisions one at a time (with a decision log), scope IN/OUT with deferrals named, lock the spine and defer the rest.
